@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Remove any references to border-border class if it exists */
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .scroll-reveal {
+    @apply opacity-0 transition-opacity duration-1000;
+  }
+  
+  .scroll-reveal.visible {
+    @apply opacity-100;
+  }
+}
