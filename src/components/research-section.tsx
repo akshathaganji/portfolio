@@ -14,7 +14,8 @@ interface ResearchProps {
 function ResearchCard({ research, index }: { research: ResearchProps; index: number }) {
   return (
     <AnimatedElement
-      type="slideUp"
+      type="slideIn"
+      direction="up"
       delay={index * 0.1}
       className="w-full"
     >
