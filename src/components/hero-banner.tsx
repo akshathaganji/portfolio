@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const images = [
-  '/images/reading.jpg',  // The reading image
-  '/images/stars.jpg',    // The stars/galaxy image
-  '/images/library.jpg'   // The library image
+  './images/reading.jpg',  // The reading image
+  './images/stars.jpg',    // The stars/galaxy image
+  './images/library.jpg'   // The library image
 ];
 
 export default function HeroBanner() {
@@ -30,7 +30,7 @@ export default function HeroBanner() {
           className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentImage ? 1 : 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         >
           <div className="absolute inset-0 bg-black/50 z-10" /> {/* Overlay */}
           <Image
@@ -48,7 +48,7 @@ export default function HeroBanner() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
           Hi, I am Akshatha Ganji
@@ -57,7 +57,7 @@ export default function HeroBanner() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           className="text-xl md:text-2xl mb-4"
         >
           Welcome to my data science portfolio!
@@ -66,7 +66,7 @@ export default function HeroBanner() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-200"
         >
           You can find my work, thoughts, and ideas here.
